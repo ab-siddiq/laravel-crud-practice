@@ -25,8 +25,12 @@
                                         <td>{{$contact->message}}</td>
 
                                         <td>
-                                            <buutton class="btn btn-success">Edit</buutton>
-                                            <buutton class="btn btn-danger">Delete</buutton>
+                                            <a href="{{route('contacts.edit',[$contact->id])}}">
+                                                <buutton class="btn btn-success">Edit</buutton>
+                                            </a>
+                                            <a href="{{route('contacts.delete',[$contact->id])}}">
+                                                <buutton class="btn btn-danger">Delete</buutton>
+                                            </a>
                                         </td>
                                     </tr>
                                     @endforeach
